@@ -1,0 +1,21 @@
+<table class="table table-hover">
+  <thead>
+     <tr>
+        <th><%= t('sidebar.name') %></th>
+        <th><%= t('sidebar.phone') %></th>
+        <th><%= t('sidebar.email') %></th>
+     </tr>
+  </thead>
+  <tbody>
+     <% @users.each do |user| %>
+        <tr>
+          <td><%= user.name %></td>
+          <td><%= user.phone %></td>
+          <td><%= user.access.email %></td>
+        </tr>
+     <% end %>
+  </tbody>
+</table>
+
+<br><br>
+<%= link_to "Add", new_user_path %>

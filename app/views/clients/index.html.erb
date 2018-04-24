@@ -1,0 +1,14 @@
+<table class="table table-hover">
+  <thead>
+     <tr>
+        <th><%= t('sidebar.phone') %></th>
+     </tr>
+  </thead>
+  <tbody>
+     <% @clients.each do |client| %>
+        <tr>
+          <td><%= client.phone %></td>
+        </tr>
+     <% end %>
+  </tbody>
+</table>
